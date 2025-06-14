@@ -12,7 +12,7 @@ router.delete("/:id", async function (req, res) {
       return res.status(404).json({ message: 'Card not found in database' });
     }
 
-    // ✅ changed .image to .url
+  
     if (!deletedCard.url) {
       return res.status(200).json({
         message: 'Deleted from DB, but no file path found',
